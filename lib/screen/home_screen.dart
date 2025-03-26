@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rokafirst/login/login.dart';
-import 'package:rokafirst/body/home_body.dart';
-import 'package:rokafirst/body/notice_body.dart'; // NoticeBody import
-import 'package:rokafirst/body/product_body.dart'; // ProductBody import
-import 'package:rokafirst/body/waiting_body.dart'; // WaitingBody import
+import 'package:rokafirst/body/notice/notice_body.dart'; // NoticeBody import
+import 'package:rokafirst/body/product/product_body.dart'; // ProductBody import
+import 'package:rokafirst/body/waiting/waiting_body.dart'; // WaitingBody import
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -14,7 +13,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   // 현재 선택된 body를 관리할 변수
-  Widget _currentBody = const HomeBody();
+  Widget _currentBody = const ProductBody();
 
   // body를 변경하는 메서드
   void _updateBody(Widget newBody) {
@@ -67,10 +66,10 @@ class HomeDrawer extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: <Widget>[
             ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('Home'),
+              leading: const Icon(Icons.production_quantity_limits),
+              title: const Text('Product'),
               onTap: () {
-                onItemTap(const HomeBody()); // HomeBody로 전환
+                onItemTap(const ProductBody()); // ProductBody로 전환
                 Navigator.pop(context); // 드로어 닫기
               },
             ),
@@ -79,14 +78,6 @@ class HomeDrawer extends StatelessWidget {
               title: const Text('Notice'),
               onTap: () {
                 onItemTap(const NoticeBody()); // NoticeBody로 전환
-                Navigator.pop(context); // 드로어 닫기
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.production_quantity_limits),
-              title: const Text('Product'),
-              onTap: () {
-                onItemTap(const ProductBody()); // ProductBody로 전환
                 Navigator.pop(context); // 드로어 닫기
               },
             ),

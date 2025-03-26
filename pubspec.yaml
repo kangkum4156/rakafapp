@@ -48,6 +48,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   webview_flutter: ^4.10.0
+  provider: ^6.0.4
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +74,7 @@ flutter:
 
   assets:
     - asset/img/
+    - asset/wine/
 
   #img 경로까지만 저장해두면 뒤에 다른 이미지를 저장해도 자동으로 등록이 됨
 
