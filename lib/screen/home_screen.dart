@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
+          icon: const Icon(Icons.map),
           onPressed: () {
             Navigator.pushReplacement(
               context,
