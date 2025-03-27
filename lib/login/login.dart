@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rokafirst/screen/home_screen.dart';
 import 'package:rokafirst/body/home/home_body.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -79,7 +78,7 @@ class LoginForm extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => HomeScreen()),
+                MaterialPageRoute(builder: (context) => HomeBody()),
               );
             },
             style: ElevatedButton.styleFrom(

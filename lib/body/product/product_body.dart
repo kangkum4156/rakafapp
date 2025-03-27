@@ -1,28 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:rokafirst/body/product/productdetail.dart';
-import 'package:rokafirst/data/product_data.dart';
+import 'package:rokafirst/data/product_data.dart'; // productByRegion 가져오기
+import 'package:rokafirst/body/product/productdetail.dart'; // 상품 상세 화면
 
 class ProductBody extends StatelessWidget {
   const ProductBody({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // 선택된 지역에 맞는 상품 목록을 불러오기
+    List<Map<String, String>>? products = productByRegion[selectedRegion];
+
     return Padding(
       padding: const EdgeInsets.all(5.0),
-      child: GridView.builder(
+      child: products == null || products.isEmpty
+          ? const Center(
+        child: Text('선택된 지역에 해당하는 상품이 없습니다.'),
+      )
+          : GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2, // 가로 2칸
           crossAxisSpacing: 5.0, // 가로 간격
           mainAxisSpacing: 5.0, // 세로 간격
           childAspectRatio: 0.75, // 아이템 비율 조정
         ),
-        itemCount: productList.length, // 상품 개수 동적 설정
+        itemCount: products.length, // 상품 개수
         itemBuilder: (context, index) {
+          var product = products[index];
           return ProductCard(
             index: index,
-            productName: productList[index]["name"] ?? "상품 ${index + 1}",
-            productPrice: productList[index]["price"] ?? "0",
-            imagePath: productList[index]["image"] ?? "assets/wine/default.png",
+            productName: product["name"] ?? "상품 ${index + 1}",
+            productPrice: product["price"] ?? "0",
+            imagePath: product["image"] ?? "assets/wine/default.png",
           );
         },
       ),
