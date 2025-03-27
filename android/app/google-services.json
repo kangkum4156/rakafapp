@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "118957275641",
+    "project_id": "airforce-92b59",
+    "storage_bucket": "airforce-92b59.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118957275641:android:b25364f00043596d282528",
+        "android_client_info": {
+          "package_name": "com.example.rokafirst"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "118957275641-mcm26lmflsuh5jo8npnhdcp0fbsprn7j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rokafirst",
+            "certificate_hash": "0962e16f7be9e74d5eabf8372e3841428ec1a05c"
+          }
+        },
+        {
+          "client_id": "118957275641-jbj5ghcgrtv9f3emei9vqa70tpu9jece.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUVbZ2aUOcxd_d5dGywrChi7ntyFOxaYY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "118957275641-jbj5ghcgrtv9f3emei9vqa70tpu9jece.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
